@@ -1,0 +1,89 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>URL Shortener</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+        
+    <!-- import Google fonts and awesome icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">        
+    <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet" type="text/css">        
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">   
+    
+  </head>
+  
+  <body>
+    
+    <div id="container">
+      <h1>URL Shortener Microservice</h1>
+      <h3>FreeCodeCamp APIs & Microservices Project</h3>
+      
+      <form action="api/shorturl/new" method="POST">
+        <label for="urlInput">URL to shorten</label>
+        <input id="urlInput" type="text" name="url" value="https://www.freecodecamp.org">
+        <input type="submit" value="POST URL">
+      </form>
+      
+      <p>
+        The URL Shortener app accepts an URL as input and returns a JSON response containing the shortened version. To
+        use it, enter the desired URL in the designated area above<!-- or append it to the app URL-->. The URL will be posted to 
+        the API endpoint: <br>
+        <code>POST [project_url]/api/shorturl/new</code>
+      </p>
+      
+      <ul>
+        <li>A valid URL returns a JSON response with a shortened version: <br>
+          <code>{"original_url":"www.google.com","short_url":1}</code>
+        </li>
+        <li>An invalid URL returns a JSON response containing an error message: <br>
+          <code>{"error":"invalid URL"}</code>
+        </li>
+        <li>Visiting the shortened URL will redirect to the original link.
+        </li>
+        <li>You can use the function dns.lookup(host, cb) from the dns core module to check if the submitted URL points to a valid site.
+        </li>
+      </ul>
+      
+      <h3>Example of Creation:</h3>
+      <code>POST [project_url]/api/shorturl/new - https://www.google.com</code>
+      
+      <h3>Example of Usage:</h3>
+      <a href="https://www.freecodecamp.org" target="_blank">
+        [this_project_url]/api/shorturl/l9AUnsxP
+      </a> 
+      
+      <h3>Expected Response (page redirects to):</h3>
+      <p><a href="https://www.freecodecamp.org" target="_blank">https://www.freecodecamp.org</a></p>
+      
+    </div>
+    
+    <footer>
+      <div id="footer-row1">
+        <a class="button" href="https://www.freecodecamp.com/meleany" target="_blank"> <i class="fa fa-free-code-camp fa-2x fa-fw"></i> </a> 
+        <a class="button" href="https://github.com/meleany" target="_blank"> <i class="fa fa-github-alt fa-2x fa-fw"></i> </a>
+        <a class="button" href="https://codepen.io/meleany" target="_blank"> <i class="fa fa-codepen fa-2x fa-fw"></i> </a>
+        <a class="button" href="https://ymelbart.wordpress.com/" target="_blank"> <i class="fa fa-wordpress fa-2x fa-fw"></i> </a>
+      </div>
+      <div id="footer-row2">
+        Yasmin Melean &copy 2019. All rights reserved.
+      </div>
+    </footer> 
+
+  </body>
+  
+</html>

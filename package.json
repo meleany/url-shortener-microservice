@@ -1,0 +1,32 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "FCC Apis and Microservices Curriculum. Project 03: URL Shortener Microservice.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "cors": "^2.8.5",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.0",
+    "shortid": "^2.2.15",
+    "body-parser": "^1.19.0"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://github.com/meleany/url-shortener-microservice"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "express",
+    "urlshortener",
+    "microservice",
+    "FCC"
+  ],
+  "author": "Yasmin M."
+}
